@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/login.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <title>Search-site</title>
+</head>
+<body>
+   
+    <header>
+            <div class="search-box">
+                <h1>Busque sua imagem</h1>
+                <div class="input-button-wrapper">
+                    <input type="text" id="search" placeholder="">
+                    <button id="button" class="btn-three" onclick="BuscarImagem()">Pesquisar</button> 
+                </div>    
+            </div>
+    </header> 
+     <main> 
+        <div id="container-galeria" class="modal">
+             <div class="mensagem" id="mensagem"></div>
+             <div id="galeria" class="galeria"></div>    
+        </div>   
+        
+        <script src="./script.js"></script>
+    </main>
+</body>
+</html>

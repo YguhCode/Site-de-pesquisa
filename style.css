@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* Estilo do body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #2b5876, #4e4376);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    padding: 30px;
+}
+
+/* Estilo da caixa de pesquisa */
+.search-box {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 30px auto; /* centraliza horizontalmente a própria div */
+    display: flex;
+    flex-direction: column; /* empilha verticalmente */
+    align-items: center;    /* centraliza horizontalmente os elementos */
+    gap: 10px;              /* espaço entre elementos */
+    text-align: center;
+}
+
+.search-box h1 {
+    padding-bottom: 30px;
+}
+/* Nova linha para input+button*/
+.search-box .input-button-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Estilo da barra de pesquisa  */
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    width: 70%;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    min-width: 0;
+}
+/* Animação do botão */
+.btn-three {
+    color: #fff;
+    background-color: #ff0000;
+    padding: 9px 15px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: all 0.3s ease; /* Transição suave para todas propriedades em 0.3 segundos */
+}
+/* Animação antes */
+.btn-three::before {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color: rgba( 255, 255, 255, 0.1);
+    z-index: 1;
+    transition: all 0.3s ease; /* Transição suave em 0.3 segundos */
+}
+/* Animação quando do botão ao apertar */
+.btn-three:hover::before {
+    opacity: 0;
+    transform: scale(0.5,0.5);
+}
+/* Botão depois de apertar o botão */
+.btn-three::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transform: scale(1.2, 1.2); /*apilca escala 2d depois*/
+    z-index: 1;
+    transition: all 0.3s;
+}
+/* Animação depois de apertar */
+.btn-three:hover::after{
+    opacity: 1;
+    transform: scale(1); /*apilca escala 2d*/
+}
+/* Container branco */
+#container-galeria {
+    background-color: white;
+    width: 90%; /*Ocupar 90% da largura de tela*/
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-height: 75vh; /* ocupa até 80% da tela */
+    overflow-y: auto;
+    
+}
+/* Definir proporção da galeria */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* várias colunas lado a lado */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.galeria img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.05);
+}
