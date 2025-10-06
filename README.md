@@ -13,5 +13,5 @@ Este é um site simples de busca de imagens que utiliza a API do [Unsplash](http
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/search-site.git
+   git clone https://github.com/YguhCode/Site-de-pesquisa
 
